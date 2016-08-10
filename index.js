@@ -7,6 +7,8 @@ var prefixer = require('gulp-autoprefixer');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var ngAnnotate = require('gulp-ng-annotate');
+var jshint = require('gulp-jshint');
+var stylish = require('jshint-stylish');
 var pump = require('pump');
 var uglify = require('gulp-uglify');
 var util = require('gulp-util');
@@ -32,6 +34,8 @@ var makeSass = function (src, dst) {
 
 var makeAngular = function (src, dst, cb) {
     var source = gulp.src(paths.js + src)
+        .pipe(jshint())
+        .pipe(jshint.reporter(stylish))
         .pipe(concat(dst))
         .pipe(gulpif(util.env.production, ngAnnotate()));
     pump([

@@ -25,12 +25,15 @@
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-if": "^2.0.1",
+    "gulp-jshint": "^2.0.1",
     "gulp-ng-annotate": "^2.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-shell": "^0.5.2",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
+    "jshint": "^2.9.2",
+    "jshint-stylish": "^2.2.0",
     "pump": "^1.0.1"
   }
 }
