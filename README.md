@@ -18,7 +18,7 @@ var h = require('gulp-helpers');
 var publish = h.publish('Your\\Package\\Namespace\\ServiceProvider');
 
 // change the sass and js source paths
-// default are 'src/resources/assets/{sass,js}/'
+// default are 'resources/assets/{sass,js}/'
 h.paths.sass = 'src/resources/assets/sass/';
 h.paths.js = 'src/resources/assets/js/';
 
