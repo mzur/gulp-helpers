@@ -43,7 +43,7 @@ var makeAngular = function (src, dst, cb) {
 
 var publish = function (provider) {
     return function () {
-        gulp.src('').pipe(shell('php ' + base.artisan + ' vendor:publish --provider="' + provider + '" --force'));
+        gulp.src('').pipe(shell('php ' + paths.artisan + ' vendor:publish --provider="' + provider + '" --force'));
     };
 };
 

@@ -5,12 +5,13 @@ Gulp helper functions for a Laravel application/package which are much faster th
 ## Installation
 
 ```
-npm install --save-dev git+https://github.com/mzur/gulp-helpers.git
+npm install --save-dev gulp git+https://github.com/mzur/gulp-helpers.git
 ```
 
 ## Usage
 
 ```js
+var gulp = require('gulp');
 var h = require('gulp-helpers');
 
 // get the publish function for a Laravel package
