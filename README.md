@@ -15,7 +15,8 @@ var gulp = require('gulp');
 var h = require('gulp-helpers');
 
 // get the publish function for a Laravel package
-var publish = h.publish('Your\\Package\\Namespace\\ServiceProvider');
+// the optional second argument specifies the tag for the publish task
+var publish = h.publish('Your\\Package\\Namespace\\ServiceProvider', 'public');
 
 // change the sass and js source paths
 // default are 'resources/assets/{sass,js}/'
