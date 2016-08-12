@@ -46,9 +46,10 @@ var makeAngular = function (src, dst, cb) {
     ], cb);
 };
 
-var publish = function (provider) {
+var publish = function (provider, tag) {
+    tag = tag || "";
     return function () {
-        gulp.src('').pipe(shell('php ' + paths.artisan + ' vendor:publish --provider="' + provider + '" --force'));
+        gulp.src('').pipe(shell('php ' + paths.artisan + ' vendor:publish --provider="' + provider + '" --tag="' + tag + '" --force'));
     };
 };
 
