@@ -32,9 +32,11 @@ h.paths.artisan = '../../../artisan'
 
 // build sass
 gulp.task('sass', function () {
-	// source: 'src/resources/assets/sass/main.scss'
-	// destination 'src/public/assets/styles/main.css'
+   // source: 'src/resources/assets/sass/main.scss'
+   // destination 'src/public/assets/styles/main.css'
    h.sass('main.scss', 'main.css');
+   // You can use @imports relative to the node_modules directory
+   // in your SASS files, too!
 });
 
 // build js/angular
