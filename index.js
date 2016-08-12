@@ -20,12 +20,13 @@ var paths = {
     js: 'resources/assets/js/',
     public: 'public/assets/',
     artisan: '../../../artisan'
-}
+};
 
 var makeSass = function (src, dst) {
     gulp.src(paths.sass + src)
         .pipe(sass({
-            outputStyle: util.env.production ? 'compressed' : 'expanded'
+            outputStyle: util.env.production ? 'compressed' : 'expanded',
+            includePaths: ['node_modules']
         }).on('error', sass.logError))
         .pipe(prefixer())
         .pipe(rename(dst))
