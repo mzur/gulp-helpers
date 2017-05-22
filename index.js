@@ -46,6 +46,18 @@ var makeAngular = function (src, dst, cb) {
     ], cb);
 };
 
+var makeJs = function (src, dst, cb) {
+    var source = gulp.src(paths.js + src)
+        .pipe(jshint())
+        .pipe(jshint.reporter(stylish))
+        .pipe(concat(dst));
+    pump([
+        source,
+        gulpif(util.env.production, uglify()),
+        gulp.dest(paths.public + 'scripts')
+    ], cb);
+};
+
 var publish = function (provider, tag) {
     tag = tag || "";
     return function () {
@@ -57,5 +69,6 @@ module.exports = {
     paths,
     sass: makeSass,
     angular: makeAngular,
+    js: makeJs,
     publish
 };

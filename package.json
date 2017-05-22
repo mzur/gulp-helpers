@@ -1,6 +1,6 @@
 {
   "name": "gulp-helpers",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Gulp helper functions for a Laravel application/package which are much faster than Laravel Elixir.",
   "main": "index.js",
   "scripts": {

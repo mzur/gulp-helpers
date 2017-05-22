@@ -40,17 +40,17 @@ gulp.task('sass', function () {
    // in your SASS files, too!
 });
 
-// build js/angular
+// build js
 gulp.task('js', function (cb) {
-	// source: 'src/resources/assets/js/**/*.js'
-	// destination 'src/public/assets/scripts/main.js'
-   h.angular('**/*.js', 'main.js', cb);
+   // source: 'src/resources/assets/js/**/*.js'
+   // destination 'src/public/assets/scripts/main.js'
+   h.js('**/*.js', 'main.js', cb);
 });
 
 gulp.task('watch', function () {
-    gulp.watch(h.paths.sass + '**/*.scss', ['sass']);
-    gulp.watch(h.paths.js + '**/*.js', ['js']);
-    gulp.watch(h.paths.public + '**/*', publish);
+   gulp.watch(h.paths.sass + '**/*.scss', ['sass']);
+   gulp.watch(h.paths.js + '**/*.js', ['js']);
+   gulp.watch(h.paths.public + '**/*', publish);
 });
 
 gulp.task('default', ['sass', 'js'], publish)
