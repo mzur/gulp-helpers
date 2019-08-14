@@ -61,7 +61,7 @@ With this example you can run `gulp` to build your assets and `gulp watch` to st
 After each build the publish task is run which will call the command:
 
 ```
-'php ../../../artisan vendor:publish --provider="Your\\Package\\Namespace\\ServiceProvider" --force'
+'php ../../../artisan vendor:publish --tag="public" --provider="Your\\Package\\Namespace\\ServiceProvider" --force'
 ```
 
 You can just as well omit the publish task if you work with the application itself and not a package installed in `vendor/`.
